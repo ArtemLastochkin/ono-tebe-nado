@@ -2,20 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1100px;
-  padding-top: 92px;
+  max-width: 1100px;
+  margin-top: 92px;
   padding-bottom: 88px;
   background-color: #ffffff;
 }
 
 .header {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
 }
 
-.header__content {
+.header_content {
   display: grid;
-  grid-template-columns: 451px 150px 451px;
+  grid-template-columns: 2fr 1fr 2fr;
   grid-template-rows: 105px;
 }
 
@@ -23,57 +23,54 @@
   display: grid;
   align-items: center;
   align-content: center;
-  padding: 2px 0px 0px 26.5px;
+  margin-left: 49.5px;
 }
 
-li {
+.menu__circle-text {
   list-style: circle;
 }
+
+.menu_link_active {
+  text-decoration: none;
+}
+
 .menu__main {
   list-style: none;
 }
 
-.menu ul {
+.header__menu__list {
   display: flex;
   column-gap: 34px;
-}
-
-.link__menu-header,
-a {
-  border-bottom: 1.2px solid #000000;
-  text-decoration: none;
+  padding-top: 5px;
+  text-underline-offset: 3px;
 }
 
 .image-header {
   height: 105px;
+  width: 148px;
 }
 
-.header__logo,
-.header__logo a {
+.header__logo {
   justify-self: center;
   border: none;
 }
 
-.contacts {
+.address {
+  width: 240px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: inherit;
+  line-height: 24.3px;
+  letter-spacing: 0.01em;
+  text-underline-offset: 5px;
+}
+
+.header__address {
   display: grid;
   justify-self: end;
   align-self: end;
-  width: 240px;
-  margin-right: 25.5px;
+  margin-right: 48.5px;
   margin-bottom: 2px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24.3px;
-  letter-spacing: 0.01em;
-}
-
-.contacts a {
-  letter-spacing: 0.01em;
-}
-
-.address {
-  margin-top: 1px;
-  font-style: inherit;
   letter-spacing: 0;
 }
 
@@ -81,66 +78,94 @@ a {
 
 .jambotron {
   position: relative;
-  width: 1100px;
-  height: 757px;
   margin-top: 96px;
   padding: 165px 50px 51px 50px;
-  overflow: hidden;
-}
-
-.jambotron__background {
-  position: absolute;
-  top: 0px;
-  left: -138px;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -137px;
   z-index: 1;
-  width: 1373px;
-  height: inherit;
 }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-  width: inherit;
-  height: inherit;
-  opacity: 0.6;
-  background-color: #000;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .title {
+  display: flex;
+  color: #fff;
+  font-size: 100px;
+  text-transform: uppercase;
+  line-height: 100px;
+  flex-direction: column;
+  row-gap: 20px;
+  letter-spacing: 30px;
+  margin-bottom: 135px;
+}
+
+.aligned-text {
+  line-height: 115px;
+  
+}
+
+.letter-spacing-extended {
+  letter-spacing: 60px;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: end;
+}
+
+.no-letter-spacing {
+  letter-spacing: initial;
+}
+
+
+
+
+
+
+/* .title {
   position: relative;
-  z-index: 1;
   justify-content: space-between;
-  width: 1000px;
-  height: 355px;
-  margin: auto auto 135px;
+  min-height: 355px;
+  margin: auto auto 135px auto;
   color: #fff;
   font-size: 100px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
-.title__first {
+.title__left {
   position: absolute;
   top: 0px;
   left: 0px;
   line-height: 115px;
 }
 
-.title__first span {
+.title__left span {
   line-height: 115px;
 }
 
-.title__second {
+.title__center {
   position: absolute;
   top: 7px;
   left: -0.15em;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   line-height: 100px;
   text-align: center;
 }
@@ -149,22 +174,21 @@ a {
   letter-spacing: 0.6em;
 }
 
-.title__third {
+.title__right {
   position: absolute;
   right: -0.3em;
   bottom: 0px;
   line-height: 100px;
   text-align: right;
-}
+} */
 
 .cover__description {
   position: relative;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: flex-end;
-  padding-left: 28.5px;
+  margin-left: 28.5px;
   font-size: 22px;
 }
 
@@ -178,12 +202,11 @@ a {
 
 .subline__button {
   display: block;
-  width: 256px;
-  height: 51px;
+  min-width: 256px;
+  min-height: 51px;
   border: 1px solid #fff;
-  padding: 0;
   color: #ffffff;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 500;
   font-size: 22px;
   line-height: 25.83px;
@@ -202,13 +225,12 @@ a {
 /* конец первой секции в main */
 
 .lots {
-  width: 1052px;
-  height: 692px;
   margin: 179px auto 181px;
+  padding: 0px 24px;
 }
 
 .lots__title {
-  padding-left: 40px;
+  margin-left: 40px;
   font-weight: 700;
   font-size: 40px;
   line-height: 46.96px;
@@ -244,7 +266,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 563px;
+  min-height: 563px;
 }
 
 .lots__text__title {
@@ -256,6 +278,10 @@ a {
   text-decoration: underline solid #fff 1px;
   text-underline-offset: 3px;
   text-transform: uppercase;
+}
+
+.lots__card-link {
+  text-decoration: none;
 }
 
 .lots__text {
@@ -313,7 +339,7 @@ a {
   display: flex;
   flex-direction: row;
   margin-top: 146px;
-  margin-left: 71px;
+  padding-left: 71px;
 }
 
 .about__image {
@@ -330,6 +356,13 @@ a {
   width: 148px;
 }
 
+.about__auction {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46.96px;
+  text-transform: uppercase;
+}
+
 .about__text {
   margin-top: 101px;
   margin-right: 34px;
@@ -338,12 +371,11 @@ a {
 
 .about__text h2 {
   margin-bottom: 100px;
-  padding: 0px;
 }
 
-.span__text {
+.about__auction-text {
   display: block;
-  padding-bottom: 24px;
+  margin-bottom:  24px;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -379,7 +411,8 @@ a {
 .footer {
   display: flex;
   justify-content: space-between;
-  width: 1000px;
+  width: 100%;
+  padding: 0px 50px;
   margin-top: 156px;
 }
 
@@ -388,31 +421,29 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 21.13px;
+  text-underline-offset: 3px;
 }
 
 .footer__menu ul {
   text-align: center;
 }
 
-.footer__menu ul li {
+.footer__menu ul li,
+.footer__social-list li {
   list-style: none;
 }
 
 .footer__menu-link_active {
-  border: none;
+  text-decoration: none;
 }
 
 .footer__social-icon {
   width: 48px;
 }
 
-.footer__social-link {
+.footer__social-list {
   display: flex;
   column-gap: 48px;
-}
-
-.footer .contacts {
-  margin: 0px;
 }
 
 /* конец footer */
