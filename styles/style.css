@@ -111,7 +111,6 @@
 
 .aligned-text {
   line-height: 115px;
-  
 }
 
 .letter-spacing-extended {
@@ -130,57 +129,7 @@
   letter-spacing: initial;
 }
 
-
-
-
-
-
-/* .title {
-  position: relative;
-  justify-content: space-between;
-  min-height: 355px;
-  margin: auto auto 135px auto;
-  color: #fff;
-  font-size: 100px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-}
-
-.title__left {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  line-height: 115px;
-}
-
-.title__left span {
-  line-height: 115px;
-}
-
-.title__center {
-  position: absolute;
-  top: 7px;
-  left: -0.15em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-  min-height: 100%;
-  line-height: 100px;
-  text-align: center;
-}
-
-.title__letter {
-  letter-spacing: 0.6em;
-}
-
-.title__right {
-  position: absolute;
-  right: -0.3em;
-  bottom: 0px;
-  line-height: 100px;
-  text-align: right;
-} */
+/* конец title text */
 
 .cover__description {
   position: relative;
